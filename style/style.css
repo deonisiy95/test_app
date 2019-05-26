@@ -4,9 +4,40 @@ body {
 .root {
   margin: auto;
   width: 60%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .header {
+  display: flex;
+  align-items: center;
   background: cadetblue;
   height: 50px;
+}
+.header_link_container {
+  width: 100%;
+  display: flex;
+}
+.header_link_container > a {
+  margin: 10px;
+}
+.header_link_container > a:nth-child(2) {
+  flex-grow: 1;
+}
+.content {
+  padding: 20px;
+}
+.login_form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: auto;
+}
+.login_button {
+  color: white;
+  text-decoration: none;
+  user-select: none;
+  padding: 0 20px;
+  outline: none;
+  border: 2px solid;
+  margin: 10px;
 }
 /*# sourceMappingURL=style.css.map */

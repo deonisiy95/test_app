@@ -5,15 +5,6 @@ import {logIn} from "../actions/sessionActions";
 
 class Login extends React.Component {
 
-    constructor(props: any) {
-        super(props);
-
-        this.state = {
-            username: '',
-            password: ''
-        };
-    }
-
     render() {
         // @ts-ignore
         const {location, is_authorized, error } = this.props;
@@ -26,7 +17,7 @@ class Login extends React.Component {
         }
 
         return (
-            <form id='login_form' onSubmit={this.handleSubmit}>
+            <form id='login_form' onSubmit={this.handleSubmit} className="login_form">
                 <label>Login</label>
                 <input required type='text' name='username'/>
                 <label>Password</label>
