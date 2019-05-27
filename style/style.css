@@ -40,4 +40,45 @@ body {
   border: 2px solid;
   margin: 10px;
 }
+.row {
+  display: flex;
+  border: 1px solid;
+  height: 33px;
+}
+.row_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row_item:not(:last-child) {
+  border-right: 1px solid;
+}
+.row_item_id {
+  width: 70px;
+}
+.row_item_name {
+  flex-grow: 1;
+}
+.row_item_number {
+  width: 200px;
+}
+.row_item_online {
+  width: 70px;
+}
+.row_item_header {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.list > div {
+  width: inherit !important;
+}
+.search {
+  padding: 5px;
+  margin-left: 10px;
+}
+.search_wrap {
+  display: flex;
+  margin-bottom: 10px;
+}
 /*# sourceMappingURL=style.css.map */

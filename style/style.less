@@ -50,3 +50,47 @@ body {
   border: 2px solid;
   margin: 10px;
 }
+
+.row {
+  display: flex;
+  border: 1px solid;
+  height: 33px;
+  &_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:not(:last-child) {
+      border-right: 1px solid;
+    }
+    &_id {
+      width: 70px;
+    }
+    &_name {
+      flex-grow: 1;
+    }
+    &_number {
+      width: 200px;
+    }
+    &_online {
+      width: 70px
+    }
+    &_header {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+    }
+  }
+}
+
+.list > div {
+  width: inherit !important;
+}
+
+.search {
+  padding: 5px;
+  margin-left: 10px;
+  &_wrap {
+    display: flex;
+    margin-bottom: 10px;
+  }
+}
