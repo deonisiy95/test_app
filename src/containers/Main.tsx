@@ -1,13 +1,16 @@
 import * as React from "react";
-import { Redirect } from 'react-router-dom';
 import {Link} from "react-router-dom";
-import {logIn} from "../actions/sessionActions";
 import {connect} from "react-redux";
 import {logOut} from "../actions/sessionActions";
 
-class Main extends React.Component{
+interface Props extends React.Props<Main> {
+    is_authorized: boolean,
+    logOut: () => void
+}
+
+class Main extends React.Component<Props, {}>{
     render(){
-        // @ts-ignore
+
         const { is_authorized } = this.props;
 
         return (
@@ -19,9 +22,7 @@ class Main extends React.Component{
                         {!is_authorized ? (
                             <Link to="/login" className="login_button">Sign In</Link>
                         ): (
-                            <div onClick={() => {
-                                // @ts-ignore
-                                this.props.logOut()}} className="login_button">Sign Out</div>
+                            <div onClick={() => { this.props.logOut() }} className="login_button">Sign Out</div>
                         )}
 
                     </div>

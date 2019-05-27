@@ -3,13 +3,19 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import {logIn} from "../actions/sessionActions";
 
-class Login extends React.Component {
+interface Props extends React.Props<Login> {
+    is_authorized: boolean,
+    error: boolean,
+    location: any,
+    logIn: (username: string, password: string) => void
+}
+
+class Login extends React.Component<Props, {}> {
 
     render() {
-        // @ts-ignore
+
         const {location, is_authorized, error } = this.props;
 
-        // @ts-ignore
         const { from } = location.state || { from: { pathname: '/' } };
 
         if (is_authorized) {
@@ -36,8 +42,7 @@ class Login extends React.Component {
         
         let username = event.target.elements.username.value;
         let password = event.target.elements.password.value;
-        
-        // @ts-ignore
+
         this.props.logIn(username, password);
     }
 }

@@ -2,8 +2,8 @@ import * as React from 'react'
 import { Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-// @ts-ignore
-const PrivateRoute = ({ component: Component, ...rest }) => {
+
+const PrivateRoute = ({ component: Component, ...rest }: any) => {
     return (
         <Route
             {...rest}
